@@ -18,6 +18,7 @@ fetch(urlAPI)
 
 function displayEmployees(employeeData) {
   employees = employeeData;
+  
   let employeeHTML = '';
   
   employees.forEach((employee, index) => {
@@ -41,10 +42,16 @@ function displayEmployees(employeeData) {
 
 function displayModal(index) {
   
-  let { name, dob, phone, email, location: { city, street, state, postcode
-  }, picture } = employees[index];
+  let { name,
+     dob,
+      phone,
+       email,
+        location: { city, street, state, postcode},
+         picture } = employees[index];
 
   let date = new Date(dob.date);
+
+  const streetAddress = `${street.number} ${street.name}`; 
 
   const modalHTML = `
   <img class="avatar" src="${picture.large}" />
@@ -54,7 +61,7 @@ function displayModal(index) {
   <p class="address">${city}</p>
   <hr />
   <p>${phone}</p>
-  <p class="address">${street}, ${state} ${postcode}</p>
+  <p class="address">${streetAddress}, ${state} ${postcode}</p>
   <p>Birthday:
   ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
   </div>
