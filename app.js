@@ -9,6 +9,8 @@ const overlay = document.querySelector(".overlay");
 const modalContainer = document.querySelector(".modal-content");
 const modalClose = document.querySelector(".modal-close");
 
+
+
 // fetch data from API
 fetch(urlAPI)
 .then(res => res.json())
@@ -51,6 +53,10 @@ function displayModal(index) {
          picture } = employees[index];
 
   let date = new Date(dob.date);
+  const formattedMonth = (date.getMonth() + 1).toLocaleString('en-US', {
+    minimumIntegerDigits: 2
+  });
+  
 
   const streetAddress = `${street.number} ${street.name}`; 
   
@@ -64,8 +70,7 @@ function displayModal(index) {
   <hr class="line" />
   <p>${phone}</p>
   <p class="address">${streetAddress}, ${state} ${postcode}</p>
-  <p>Birthday:
-  ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
+  <p>Birthday: ${formattedMonth}/${date.getDate()}/${date.getFullYear()}</p>
   </div> `;
 
   modalContainer.innerHTML = modalHTML;
