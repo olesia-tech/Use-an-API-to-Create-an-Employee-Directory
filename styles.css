@@ -12,6 +12,24 @@ body {
     background: rgba(100, 100, 100, 0.4)
     }
 
+
+    .modal {
+      position: relative;
+      width: fit-content;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
+    }
+
+    .modal .line {
+      margin: 10px 0;
+      border: none;
+      border-top: 1px solid #ccc;
+      
+    }
+     
+
     .modal-content {
       width: 375px;
       margin: 15% auto auto;
@@ -21,6 +39,7 @@ body {
       border: 1px solid #778;
       border-radius: 5px;
       padding: 30px 20px;
+      z-index: 1;
       }
 
       .modal-close {
@@ -28,6 +47,7 @@ body {
         right: 15px;
         top: 5px;
         cursor: pointer;
+        z-index: 2;
         }
 
         .hidden {
@@ -42,11 +62,12 @@ body {
 
           .card {
             display: flex;
-            
+            align-items: center;
             background-color: white;
             border: 0.7px solid black;
             border-radius: 5px;
-            padding: 20px;
+            padding: 5px;
+            height: 150px;
           }
 
           .card p {
@@ -55,10 +76,10 @@ body {
           }
 
           .avatar {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
-            margin-bottom: 10px;
+            
             margin-right: 10px;
           }
 
@@ -67,6 +88,8 @@ body {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            overflow: auto;
+            font-size: 14px;
           }
 
           .name {
@@ -79,11 +102,13 @@ body {
           .email {
             margin-bottom: 3px;
             margin-top: 8px;
+            margin-right: 4px;
           }
 
           .address {
             margin-bottom: 10px;
             margin-top: 8px;
+            
           }
 
           
