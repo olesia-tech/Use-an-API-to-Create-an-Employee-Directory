@@ -40,6 +40,7 @@ function displayEmployees(employeeData) {
 }
   
 
+
 function displayModal(index) {
   
   let { name,
@@ -52,6 +53,7 @@ function displayModal(index) {
   let date = new Date(dob.date);
 
   const streetAddress = `${street.number} ${street.name}`; 
+  
 
   const modalHTML = `
   <img class="avatar" src="${picture.large}" />
@@ -59,17 +61,16 @@ function displayModal(index) {
   <h2 class="name">${name.first} ${name.last}</h2>
   <p class="email">${email}</p>
   <p class="address">${city}</p>
-  <hr />
+  <hr class="line" />
   <p>${phone}</p>
   <p class="address">${streetAddress}, ${state} ${postcode}</p>
   <p>Birthday:
   ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
-  </div>
-  `;
+  </div> `;
 
-  overlay.classList.remove("hidden");
   modalContainer.innerHTML = modalHTML;
-  }
+  overlay.classList.remove('hidden');
+}
  
 
   function closeModal(){

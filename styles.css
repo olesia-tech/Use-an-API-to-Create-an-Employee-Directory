@@ -1,15 +1,26 @@
+
+*{
+  font-family: 'Roboto', sans-serif;
+}
+
 body {
   position: relative;
   background-color: #f9f9f9;
   }
  
+  h1 {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 20px;
+  }
+
   .overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(100, 100, 100, 0.4)
+    background: rgba(100, 100, 100, 0.4);
     }
 
 
@@ -22,12 +33,12 @@ body {
       
     }
 
-    .modal .line {
+     .line {
       margin: 10px 0;
       border: none;
       border-top: 1px solid #ccc;
-      
-    }
+      width: 100%;
+      }
      
 
     .modal-content {
@@ -70,6 +81,12 @@ body {
             height: 150px;
           }
 
+          .card:hover {
+            background-color: lightgray;
+            cursor: pointer;
+          }
+
+
           .card p {
             font-weight: 100;
             color: #888;
@@ -93,7 +110,7 @@ body {
           }
 
           .name {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
             margin-bottom: 3px;
             color: #333;
@@ -110,6 +127,6 @@ body {
             margin-top: 8px;
             
           }
-
+    
           
 
